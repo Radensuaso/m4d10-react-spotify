@@ -1,4 +1,4 @@
-const fetchGet = async (url) => {
+const fetchGet = async (url, setTheState) => {
   try {
     const response = await fetch(url, {
       headers: {
@@ -8,7 +8,7 @@ const fetchGet = async (url) => {
     })
     if (response.ok) {
       const fetchedContent = await response.json()
-      return fetchedContent
+      setTheState({ songs: fetchedContent.data, update: false })
     } else {
       console.log("There was an error")
     }

@@ -1,7 +1,7 @@
 import Card from "react-bootstrap/Card"
 
 const SingleSong = () => (
-  <Card>
+  <Card className="SingleSong">
     <Card.Img variant="top" src="holder.js/100px180" />
     <Card.Body>
       <Card.Title>Card Title</Card.Title>
