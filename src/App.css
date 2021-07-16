@@ -8,6 +8,33 @@ nav#nav-spotify {
   top: 0;
   left: 0;
   bottom: 0;
+  z-index: 8;
   background-color: black;
-  color: white;
+  color: #7b7b7b;
+}
+
+nav#nav-spotify img {
+  width: 11rem;
+}
+
+nav#nav-spotify .nav-spotify-link {
+  cursor: pointer;
+}
+
+nav#nav-spotify .menu-icon {
+  font-size: 25px;
+}
+
+nav#nav-spotify .menu-description {
+  font-size: 14px;
+}
+
+nav#nav-spotify .nav-button {
+  border-radius: 18px;
+  font-weight: bold;
+  width: 90%;
+}
+
+nav#nav-spotify .nav-spotify-bottom {
+  margin-bottom: 10rem;
 }
