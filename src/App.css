@@ -1,0 +1,13 @@
+div.App {
+  height: 100vh;
+}
+
+/* Nav Spotify */
+nav#nav-spotify {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  color: white;
+}
