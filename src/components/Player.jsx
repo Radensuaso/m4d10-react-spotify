@@ -57,7 +57,7 @@ const Player = () => (
                 <FaPlay />
               </span>
 
-              <span class="footer-icons pause-footer d-none">
+              <span className="footer-icons pause-footer d-none">
                 <FaPause />
               </span>
             </div>
@@ -77,7 +77,7 @@ const Player = () => (
             type="range"
             min="1"
             max="100"
-            value="50"
+            defaultValue
             className="slider mb-n1"
             id="song-timer"
           />
@@ -107,7 +107,7 @@ const Player = () => (
           type="range"
           min="1"
           max="100"
-          value="50"
+          defaultValue
           className="slider"
           id="volume-range"
         />

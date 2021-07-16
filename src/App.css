@@ -17,10 +17,6 @@ nav#nav-spotify img {
   width: 11rem;
 }
 
-nav#nav-spotify .nav-spotify-link {
-  cursor: pointer;
-}
-
 nav#nav-spotify .menu-icon {
   font-size: 25px;
 }
@@ -214,4 +210,17 @@ div.controls-icons div.d-inline-block > div {
 #song-timer {
   min-width: 40vh;
   max-width: 50vh;
+}
+
+/* Home Spotify */
+
+#home-spotify {
+  padding-left: 13rem;
+  height: 100%;
+  background: rgb(37, 70, 109);
+  background: linear-gradient(
+    142deg,
+    rgba(37, 70, 109, 1) 68%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
