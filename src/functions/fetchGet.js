@@ -1,6 +1,6 @@
-const fetchGet = async (url, setTheState) => {
+const fetchGet = async (url, query, setTheState) => {
   try {
-    const response = await fetch(url, {
+    const response = await fetch(url + query, {
       headers: {
         Authorization:
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNjA5ZmIzNTgxNzAwMTVjMjI3MGMiLCJpYXQiOjE2MjY0Mzk4MTksImV4cCI6MTYyNzY0OTQxOX0.r_G81mw3I9g934aGyIO8AZbfkWxO_W7hS9Tlz9lYZNY",
