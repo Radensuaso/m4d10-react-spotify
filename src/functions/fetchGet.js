@@ -8,7 +8,10 @@ const fetchGet = async (url, query, setTheState) => {
     })
     if (response.ok) {
       const fetchedContent = await response.json()
-      setTheState({ songs: fetchedContent.data, update: false })
+      setTheState({
+        data: fetchedContent.data ? fetchedContent.data : fetchedContent,
+        update: false,
+      })
     } else {
       console.log("There was an error")
     }

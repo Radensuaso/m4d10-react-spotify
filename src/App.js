@@ -1,19 +1,18 @@
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./App.css"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import { BrowserRouter as Router, Route } from "react-router-dom"
 import NavSpotify from "./components/NavSpotify"
 import Player from "./components/Player"
 import HomeSpotify from "./components/HomeSpotify"
+import ArtistPage from "./components/ArtistPage"
 
 const App = () => {
   return (
     <Router>
       <div className="App">
         <NavSpotify />
-        <Switch>
-          <Route path="/" component={HomeSpotify} />
-          <Route path="/home" component={HomeSpotify} />
-        </Switch>
+        <Route path="/" exact component={HomeSpotify} />
+        <Route path="/artist/:artistID" component={ArtistPage} />
         <Player />
       </div>
     </Router>

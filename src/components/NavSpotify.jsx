@@ -16,9 +16,9 @@ const NavSpotify = (props) => {
           <img src={spotifyLogo} alt="spotify logo" />
         </div>
         <Link
-          to="/home"
+          to="/"
           className={
-            props.location.pathname === "/home" ? "text-light" : "text-muted"
+            props.location.pathname === "/" ? "text-light" : "text-muted"
           }
         >
           <div className="nav-spotify-link mx-3 mb-3 d-flex align-items-center">
