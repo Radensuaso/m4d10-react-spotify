@@ -1,6 +1,6 @@
-const fetchGet = async (url, query, setTheState) => {
+const fetchGet = async (url, setTheState) => {
   try {
-    const response = await fetch(url + query, {
+    const response = await fetch(url, {
       headers: {
         Authorization:
           "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MGRjNjA5ZmIzNTgxNzAwMTVjMjI3MGMiLCJpYXQiOjE2MjY0Mzk4MTksImV4cCI6MTYyNzY0OTQxOX0.r_G81mw3I9g934aGyIO8AZbfkWxO_W7hS9Tlz9lYZNY",
@@ -10,13 +10,22 @@ const fetchGet = async (url, query, setTheState) => {
       const fetchedContent = await response.json()
       setTheState({
         data: fetchedContent.data ? fetchedContent.data : fetchedContent,
-        update: false,
+        loading: false,
+        error: false,
       })
     } else {
-      console.log("There was an error")
+      setTheState({
+        data: [],
+        loading: false,
+        error: true,
+      })
     }
   } catch (error) {
-    console.log(error)
+    setTheState({
+      data: [],
+      loading: false,
+      error: true,
+    })
   }
 }
 

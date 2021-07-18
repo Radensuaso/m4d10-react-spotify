@@ -4,7 +4,11 @@ import { useState, useEffect } from "react"
 import fetchGet from "../functions/fetchGet"
 
 const ArtistPage = (props) => {
-  const [artist, setArtist] = useState({ data: {}, update: true })
+  const [artist, setArtist] = useState({
+    data: {},
+    loading: true,
+    error: false,
+  })
   const url = "https://striveschool-api.herokuapp.com/api/deezer/artist/"
 
   const artistID = props.match.params.artistID
@@ -13,7 +17,7 @@ const ArtistPage = (props) => {
     fetchGet(url, artistID, setArtist)
     console.log(artist)
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [artist.update])
+  }, [artist.loading])
 
   return (
     <>

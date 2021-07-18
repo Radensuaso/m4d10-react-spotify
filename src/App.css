@@ -244,6 +244,7 @@ div.controls-icons div.d-inline-block > div {
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .card-text {
