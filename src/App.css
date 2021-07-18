@@ -262,7 +262,7 @@ div.controls-icons div.d-inline-block > div {
 /* Artist page */
 #artist-container {
   padding-left: 14rem;
-  min-height: 60vh;
+  min-height: 100vh;
   background-color: #121212;
 }
 
@@ -295,3 +295,12 @@ div#artist-header-container div.d-flex p.listeners {
   font-size: 16px;
   line-height: 32px;
 }
+
+/* Album page */
+#album-container {
+  padding-left: 14rem;
+  min-height: 100vh;
+}
+
+/* Album jumbotron */
+/* #album-header-container {} */
