@@ -38,9 +38,21 @@ const HomeSpotify = ({ setPlayerSong }) => {
 
   return (
     <Container fluid id="home-spotify">
-      <SongRow title={queries[0]} info={query0} setPlayerSong={setPlayerSong} />
-      <SongRow title={queries[1]} info={query1} setPlayerSong={setPlayerSong} />
-      <SongRow title={queries[2]} info={query2} setPlayerSong={setPlayerSong} />
+      <SongRow
+        title={queries[0]}
+        songs={query0}
+        setPlayerSong={setPlayerSong}
+      />
+      <SongRow
+        title={queries[1]}
+        songs={query1}
+        setPlayerSong={setPlayerSong}
+      />
+      <SongRow
+        title={queries[2]}
+        songs={query2}
+        setPlayerSong={setPlayerSong}
+      />
     </Container>
   )
 }

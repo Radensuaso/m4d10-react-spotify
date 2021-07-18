@@ -2,27 +2,48 @@ import Container from "react-bootstrap/Container"
 import ArtistJumbotron from "./ArtistJumbotron"
 import { useState, useEffect } from "react"
 import fetchGet from "../functions/fetchGet"
+import SongRow from "./SongRow"
 
 const ArtistPage = (props) => {
   const [artist, setArtist] = useState({
-    data: {},
+    data: null,
     loading: true,
     error: false,
   })
-  const url = "https://striveschool-api.herokuapp.com/api/deezer/artist/"
 
-  const artistID = props.match.params.artistID
+  const [trackList, setTrackList] = useState({
+    data: [],
+    loading: true,
+    error: false,
+  })
 
+  /* fetch artist */
   useEffect(() => {
-    fetchGet(url, artistID, setArtist)
-    console.log(artist)
+    const artistUrl =
+      "https://striveschool-api.herokuapp.com/api/deezer/artist/"
+
+    const artistID = props.match.params.artistID
+
+    fetchGet(artistUrl + artistID, setArtist)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [artist.loading])
 
+  /* fetch artist tracklist */
+  useEffect(() => {
+    artist.data && fetchGet(artist.data.tracklist, setTrackList)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [artist.data])
+
   return (
     <>
-      <ArtistJumbotron artist={artist.data} />
-      <Container fluid id="artist-container"></Container>
+      {artist.data && <ArtistJumbotron artist={artist.data} />}
+      <Container fluid id="artist-container" className="pt-5">
+        <SongRow
+          title={"Top 5 Songs"}
+          songs={trackList}
+          setPlayerSong={props.setPlayerSong}
+        />
+      </Container>
     </>
   )
 }
