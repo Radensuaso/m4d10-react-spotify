@@ -23,7 +23,7 @@ const SearchPage = ({ setPlayerSong }) => {
   return (
     <Container fluid id="search-container">
       <Row>
-        <Col xm={12} md={8} lg={4}>
+        <Col xs={12} md={8} lg={4}>
           <Form.Group className="search-field">
             <Form.Control
               onChange={(e) => setQuery(e.target.value)}

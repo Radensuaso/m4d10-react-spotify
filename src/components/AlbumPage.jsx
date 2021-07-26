@@ -15,7 +15,7 @@ const AlbumPage = (props) => {
     const albumUrl = "https://striveschool-api.herokuapp.com/api/deezer/album/"
 
     const albumID = props.match.params.albumID
-    fetchGet(albumUrl + albumID, setAlbum)
+    fetchGet(albumUrl, setAlbum, albumID)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [album.loading])
 
@@ -24,7 +24,7 @@ const AlbumPage = (props) => {
 
   return (
     <>
-      <AlbumJumbotron dominantColor={data.vibrant} />
+      <AlbumJumbotron album={album} dominantColor={data.vibrant} />
       <Container
         fluid
         id="album-container"

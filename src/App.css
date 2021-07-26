@@ -321,4 +321,26 @@ div#artist-header-container div.d-flex p.listeners {
 }
 
 /* Album jumbotron */
-/* #album-header-container {} */
+#album-header-container .album .col-12 > img {
+  box-shadow: 10px 10px 20px 8px rgb(0 0 0 / 18%);
+}
+
+#album-header-container .album h6 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+#album-header-container .album h1 {
+  font-size: 50px;
+  font-weight: 900;
+}
+
+#album-header-container .album .album-info img {
+  width: 2rem;
+  border-radius: 50%;
+}
+
+#album-header-container .album .album-info .dot-separator {
+  font-size: 25px;
+  font-weight: 700;
+}
