@@ -4,7 +4,7 @@ import SingleSongCard from "./SingleSongCard"
 import Loading from "./Loading"
 import AlertSpotify from "./AlertSpotify"
 
-const SongRowSearch = (props) => (
+const SongRowEntire = (props) => (
   <>
     <h2 className="row-title">
       {props.title} {props.songs.loading && <Loading />}
@@ -23,4 +23,4 @@ const SongRowSearch = (props) => (
   </>
 )
 
-export default SongRowSearch
+export default SongRowEntire

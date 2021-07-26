@@ -4,7 +4,7 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import { useState, useEffect } from "react"
 import fetchGet from "../functions/fetchGet"
-import SongRowSearch from "./SongRowSearch"
+import SongRowEntire from "./SongRowEntire"
 
 const SearchPage = ({ setPlayerSong }) => {
   const [query, setQuery] = useState("")
@@ -35,7 +35,7 @@ const SearchPage = ({ setPlayerSong }) => {
           </Form.Group>
         </Col>
       </Row>
-      <SongRowSearch
+      <SongRowEntire
         title={"Searched Songs"}
         songs={songs}
         setPlayerSong={setPlayerSong}
