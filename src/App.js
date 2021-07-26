@@ -6,6 +6,7 @@ import Player from "./components/Player"
 import HomeSpotify from "./components/HomeSpotify"
 import ArtistPage from "./components/ArtistPage"
 import AlbumPage from "./components/AlbumPage"
+import SearchPage from "./components/SearchPage"
 import { useState } from "react"
 
 const App = () => {
@@ -69,6 +70,12 @@ const App = () => {
           exact
           render={(routerProps) => (
             <HomeSpotify {...routerProps} setPlayerSong={setPlayerSong} />
+          )}
+        />
+        <Route
+          path="/search"
+          render={(routerProps) => (
+            <SearchPage {...routerProps} setPlayerSong={setPlayerSong} />
           )}
         />
         <Route

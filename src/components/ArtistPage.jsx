@@ -24,7 +24,7 @@ const ArtistPage = (props) => {
 
     const artistID = props.match.params.artistID
 
-    fetchGet(artistUrl + artistID, setArtist)
+    fetchGet(artistUrl, setArtist, artistID)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [artist.loading])
 

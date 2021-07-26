@@ -25,13 +25,13 @@ const HomeSpotify = ({ setPlayerSong }) => {
   const url = "https://striveschool-api.herokuapp.com/api/deezer/search?q="
 
   useEffect(() => {
-    fetchGet(url + queries[0], setQuery0)
+    fetchGet(url, setQuery0, queries[0])
     console.log(query0)
 
-    fetchGet(url + queries[1], setQuery1)
+    fetchGet(url, setQuery1, queries[1])
     console.log(query1)
 
-    fetchGet(url + queries[2], setQuery2)
+    fetchGet(url, setQuery2, queries[2])
     console.log(query2)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [query0.loading, query1.loading, query2.loading])

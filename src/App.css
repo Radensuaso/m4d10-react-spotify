@@ -1,3 +1,9 @@
+/* Container fluid */
+.container-fluid {
+  padding-left: 14rem;
+  padding-top: 5rem;
+}
+
 /* Nav Spotify */
 nav#nav-spotify {
   position: fixed;
@@ -211,8 +217,6 @@ div.controls-icons div.d-inline-block > div {
 /* Home Spotify */
 
 #home-spotify {
-  padding-left: 14rem;
-  padding-top: 5rem;
   padding-bottom: 10rem;
   min-height: 100vh;
   background: rgb(37, 70, 109);
@@ -261,7 +265,6 @@ div.controls-icons div.d-inline-block > div {
 
 /* Artist page */
 #artist-container {
-  padding-left: 14rem;
   min-height: 100vh;
   background-color: #121212;
 }
@@ -298,8 +301,23 @@ div#artist-header-container div.d-flex p.listeners {
 
 /* Album page */
 #album-container {
-  padding-left: 14rem;
   min-height: 100vh;
+}
+
+/* Search Page */
+#search-container {
+  min-height: 100vh;
+  padding-bottom: 10rem;
+  background: rgb(37 109 88);
+  background: linear-gradient(
+    142deg,
+    rgb(37 109 88) 26%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+#search-container .search-field input {
+  border-radius: 25px;
 }
 
 /* Album jumbotron */
